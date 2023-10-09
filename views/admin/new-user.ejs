@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+
+<div class="main-w3layouts wrapper">
+    <h1>Add New User</h1>
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            <form id="form" action="/admin/new-user" method="post">
+                <label  for="name">Name:</label>
+                <input class="text" type="text" id="name" name="name" placeholder="Username">
+                <div id="nameerr"></div>
+                <label for="email">Email:</label>
+                <input class="text " type="email" id="email" name="email" placeholder="Email">
+                <div id="emailerr"></div>
+                <label for="mno">Mobile No:</label>
+                <input class="text" type="text" name="mno" id="mobile" placeholder="Mobile Number" >
+                <div id="mobileerr"></div>
+                <label for="password">Password:</label>   
+                <input class="text " type="password" id="password" name="password" placeholder=" Password" >
+                <div id="passworderr"></div> 
+                <div class="wthree-text">
+                  
+                    <div class="clear"> </div>
+                </div>
+                <input type="submit" value="Add User">
+            </form>
+            <p> <a href="admin/dashboard">back</a></p>
+        </div>
+    </div>
+  
+    <% if(typeof message !== "undefined"){%>
+    <div id="alert" class="colorlibcopy-agile">
+        <p><%= message %>   </p>
+    </div>
+    <% } %>
+ 
+    
+ <script src="/validation.js"></script> 
+</div>
+<%- include('../layout/footer.ejs')%>
